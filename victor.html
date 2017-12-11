@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+	</head>
+
+	<body >
+<table class="plain">
+<tbody>
+<tr>
+<th>Página:</th>
+<th>HTTP/HTTS</th>
+<th>Versión</th>
+<th>Solicitudes</th>
+<th>Tiempo (finalizado)</th>
+<th><a class="external-link" title="" href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Server" target="_self">Server</a></th>
+<th><a class="external-link" title="" href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Content-Encoding" target="_self">Content-Encoding</a></th>
+<th><a class="external-link" title="" href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers/Strict-Transport-Security" target="_self">Strict-Transport-Security</a></th>
+</tr>
+<tr>
+<td>elpuig.xeill.net</td>
+<td> HTTPS</td>
+<td> HTTP/1.1</td>
+<td> 14</td>
+<td> 1.22s</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">Zope/(2.13.20, python 2.7.3, linux2) ZServer/1.1</span></span></td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">gzip</span></span></td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">max-age=15768000</span></span></td>
+</tr>
+<tr>
+<td>ru.wikipedia.org</td>
+<td> HTTPS</td>
+<td> HTTP/2.0</td>
+<td> 41</td>
+<td> 3.04s</td>
+<td> mw1181.eqiad.wmnet</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">gzip</span></span></td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">max-age=106384710; includeSubDomains; preload</span></span></td>
+</tr>
+<tr>
+<td>elpais.com</td>
+<td> HTTP/HTTPS</td>
+<td> HTTP/1.1 HTTP/2.0</td>
+<td>542</td>
+<td> 2 min</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">nginx/1.3.5 epet/0.8.0.2</span></span></td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">gzip</span></span></td>
+<td> No tiene</td>
+</tr>
+<tr>
+<td>www.lavanguardia.com</td>
+<td> HTTP</td>
+<td> HTTP/1.1</td>
+<td> 670</td>
+<td> 3 min 19 s</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">nginx</span></span></td>
+<td> gzip</td>
+<td> No tiene</td>
+</tr>
+<tr>
+<td>www.google.es</td>
+<td> HTTPS</td>
+<td> HTTP/2.0</td>
+<td> 46</td>
+<td> 12,49 s</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">gws</span></span></td>
+<td> br</td>
+<td> max-age=3600</td>
+</tr>
+<tr>
+<td>www.youtube.com</td>
+<td> HTTPS</td>
+<td> HTTP/2.0</td>
+<td> 67</td>
+<td> 17,63 s</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">YouTube Frontend Proxy</span></span></td>
+<td>br</td>
+<td>max-age=31536000</td>
+</tr>
+<tr>
+<td>h2o.examp1e.net</td>
+<td>  HTTP/HTTPS</td>
+<td>  HTTP/1.1 HTTP/2.0</td>
+<td> 15</td>
+<td>5.20 s</td>
+<td> h2o/2.3.0-DEV</td>
+<td> gzip, deflate,br</td>
+<td> No tiene</td>
+</tr>
+<tr>
+<td>caddyserver.com</td>
+<td>   HTTP/HTTPS</td>
+<td>   HTTP/1.1 HTTP/2.0</td>
+<td> 28</td>
+<td> 4.17 s</td>
+<td> <span aria-labelledby="value"><span class="objectBox objectBox-string">Caddy</span></span></td>
+<td> gzip</td>
+<td> max-age=31536000</td>
+</tr>
+</tbody>
+</table>
+Utilice las herramientas del desarrollador de Chromium para:
+<ul>
+ 	<li>Activar el soporte para <a class="external-link" title="" href="https://en.wikipedia.org/wiki/QUIC" target="_self">QUIC</a> en la URL: chrome://flags/#enable-quic</li>
+ 	<li>Observar el uso de QUIC en la URL: chrome://net-internals/#quic</li>
+ 	<li>Determinar qué servicios (de los de la lista anterior) utilizan QUIC</li>
+</ul>
+www.google.es
+
+clients1.google.com:443
+
+googleadd.g.doubleclick.net:443
+
+www.youtube.com:443
+
+Consulte en el sitio <a class="external-link" title="" href="http://httparchive.org/" target="_self">HTTP Archive</a>:
+<ul>
+ 	<li><a class="external-link" title="" href="http://httparchive.org/trends.php#bytesTotal&amp;reqTotal" target="_self">El total transferido y el número de peticiones</a></li>
+ 	<li><a class="external-link" title="" href="http://httparchive.org/trends.php#perHttps" target="_self">El uso de HTTPS</a></li>
+ 	<li><a class="external-link" title="" href="http://httparchive.org/trends.php#perCompressed" target="_self">El uso de compresión</a></li>
+</ul>
+<h3></h3>
+&nbsp;
+<h3>Rendimiento</h3>
+&nbsp;
+
+El comando <a class="external-link" title="" href="https://en.wikipedia.org/wiki/ApacheBench" target="_self">ab</a> forma parte de las herramientas que acompañan al servidor web Apache y permite generar peticiones concurrentes para poner a prueba un servidor.
+
+Por ejemplo, para solicitar 1000 veces con un nivel de concurrencia de 25 la página web del centro se puede escribir:
+<pre>ab -n 1000 -c 25 https://elpuig.xeill.net/</pre>
+Utilice el comando ab para solicitar las siguientes webs:
+<ul>
+ 	<li>https://elpuig.xeill.net/</li>
+ 	<li>https://ru.wikipedia.org/ (ab -n 1000 -c 25 https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0)</li>
+ 	<li>https://www.google.es/</li>
+</ul>
+&nbsp;
+
+Y rellenar la siguiente tabla:
+<table class="plain">
+<tbody>
+<tr>
+<th>Server hostname</th>
+<th>Server software</th>
+<th>SSL/TLS Protocol</th>
+<th>Document length</th>
+<th>Time taken</th>
+<th>Failed request</th>
+<th>Requests per second</th>
+<th>Transfer rate</th>
+</tr>
+<tr>
+<td>elpuig.xeill.net</td>
+<td> Zope/(2.13.20,</td>
+<td>  TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256</td>
+<td> 31542 bytes</td>
+<td>42.402 seconds</td>
+<td> 0</td>
+<td>23.58 [#/sec] (mean)</td>
+<td>739.90 [Kbytes/sec] received</td>
+</tr>
+<tr>
+<td>ru.wikipedia.org</td>
+<td> mw1268.eqiad.wmnet</td>
+<td> TLSv1.2,ECDHE-ECDSA-AES256-GCM-SHA384,256,256</td>
+<td> 0 bytes</td>
+<td> 7.193 seconds</td>
+<td> 0</td>
+<td> 139.02 [#/sec] (mean)</td>
+<td>192.60 [Kbytes/sec] received</td>
+</tr>
+<tr>
+<td>www.google.es</td>
+<td> gws</td>
+<td> TLSv1.2,ECDHE-RSA-AES128-GCM-SHA256,2048,128</td>
+<td> 13259 bytes</td>
+<td> 7.517 seconds</td>
+<td>988</td>
+<td>133.04 [#/sec] (mean)</td>
+<td> 1828.20 [Kbytes/sec] received</td>
+</tr>
+</tbody>
+</table>
+Instale el paquete <strong>nghttp2</strong>  y utilice la herramienta <strong>h2load</strong> para hacer peticiones HTTP/2 a los siguientes servidores web:
+<h3>HTTPS</h3>
+&nbsp;
+
+Utilice la página <a class="external-link" title="" href="https://www.ssllabs.com/ssltest/" target="_self">https://www.ssllabs.com/ssltest/</a> para obtener un informe de:
+<ol>
+ 	<li>elpuig.xeill.net</li>
+ 	<li>ru.wikipedia.org</li>
+ 	<li>www.google.es</li>
+</ol>
+&nbsp;
+<table class="plain">
+<tbody>
+<tr>
+<th>Web</th>
+<th>Overall rating</th>
+<th>HSTS</th>
+<th>Issuer</th>
+<th>Protocols</th>
+</tr>
+<tr>
+<td>elpuig.xeill.net</td>
+<td> A+</td>
+<td>Yes</td>
+<td> Let's Encrypt Authority X3</td>
+<td> TLS 1.3
+
+TLS 1.2
+
+TLS 1.1
+
+TLS 1.0
+
+SSL 3
+
+SSL 2</td>
+</tr>
+<tr>
+<td>ru.wikipedia.org</td>
+<td> A+</td>
+<td> Yes</td>
+<td> GlobalSign Organization Validation CA - SHA256 - G2</td>
+<td>TLS 1.3
+
+TLS 1.2
+
+TLS 1.1
+
+TLS 1.0
+
+SSL 3
+
+SSL 2</td>
+</tr>
+<tr>
+<td>www.google.es</td>
+<td> A</td>
+<td> Yes</td>
+<td> Google Internet Authority G2</td>
+<td>TLS 1.3
+
+TLS 1.2
+
+TLS 1.1
+
+TLS 1.0
+
+SSL 3
+
+SSL 2</td>
+</tr>
+</tbody>
+</table>
+&nbsp;
+
+Utilice las herramientas <a class="external-link" title="" href="https://github.com/mozilla/cipherscan" target="_self">cipherscan</a> y <a class="external-link" title="" href="https://github.com/mozilla/tls-observatory" target="_self">TLS Observatory</a> para obtener informes de las tres páginas anteriores.
+
+    </body>
+</html>
